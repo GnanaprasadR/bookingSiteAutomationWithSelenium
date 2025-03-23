@@ -41,7 +41,7 @@ public class simpleSiteLoginPageActivities {
         driver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
         System.out.println("Closing the tab/window");
         driver.quit();
-        System.out.println("Closing the tab/window successfully");
+        System.out.println("Closed the tab/window successfully");
 
     }
 }
