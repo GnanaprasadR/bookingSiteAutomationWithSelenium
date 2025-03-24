@@ -8,8 +8,8 @@ import java.time.Duration;
 
 public class simpleSiteLoginPageActivities {
     public static void main(String[] args) throws InterruptedException {
-
-        System.setProperty("webdriver.chrome.driver", "C:/Users/GnanaprasadR/chromedriver/chromedriver.exe");
+        String driverPath = System.getProperty("user.dir") + "/lib/chromedriver/chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver", driverPath);
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -39,6 +39,9 @@ public class simpleSiteLoginPageActivities {
         driver.findElement(By.cssSelector("input[type*='pass']")).sendKeys("rahulshettyacademy");
         driver.findElement(By.id("chkboxOne")).click();
         driver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
+        driver.navigate().back();
+        driver.navigate().forward();
+
         System.out.println("Closing the tab/window");
         driver.quit();
         System.out.println("Closed the tab/window successfully");
