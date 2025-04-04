@@ -13,5 +13,8 @@ This project contains basic Selenium WebDriver test automation scripts for a dem
 - Flight Search Functionality
 - Window and Tab Switching
 
+## Note
+This project was created for learning and practice the automation testing.
+
 ## Author
 Gnanaprasad R
